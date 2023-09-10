@@ -334,11 +334,25 @@
         </div>
         <!--Lesson end-->
 
+        <div class="center buttons mt-auto">
+            <button v-on:click="reset">Reset</button>
+        </div>
+
+        <div id="scores" class="center mt-auto">
+            <ul>
+                <li v-for="item in scores" :style="'color:' + item[2]">
+                    <span class="gram">{{ item[0] }}</span>
+                    <span class="score">{{ item[1] }}</span>
+                </li>
+            </ul>
+        </div>
+
         <!--Stats start-->
         <div class="center stats mt-auto">
             <h4>WPM: {{ rawWPM }} </h4>
             &nbsp; &nbsp; &nbsp; &nbsp; <h4>Accuracy: {{ accuracy }} % </h4>
             &nbsp; &nbsp; &nbsp; &nbsp; <h4>Average WPM: {{ averageWPM }} </h4>
+            &nbsp; &nbsp; &nbsp; &nbsp; <h4>Progress: {{ progress }} % </h4>
         </div>
         <!--Stats end-->
 

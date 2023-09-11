@@ -424,7 +424,7 @@ var ngramTypeConfig = {
             let scores = this.dataSource.scores;
             let ngrams = [];
             for (const ngram in scores) {
-                for (let i=0; i<this.GOOD_SCORE-scores[ngram]; i++) {
+                for (let i=0; i<Math.pow(1.5,this.GOOD_SCORE-scores[ngram]); i++) {
                     ngrams.push(ngram);
                 }
             }
